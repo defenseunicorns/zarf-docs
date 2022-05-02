@@ -2,6 +2,24 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+# Temporary Defense Unicorn notes for deploying locally
+```
+# Install npm if you don't have npm installed
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+
+# Install npx (if you don't already have it)
+npm install -g npx
+
+# Download the docusaurus tool
+npx create-docusaurus@latest zarf-docs classic
+
+# Start the server locally 
+npx docusaurus start                               # starts hosing on localhost:3000
+```
+
+
 ### Installation
 
 ```
