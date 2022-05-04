@@ -21,17 +21,18 @@ For the remainder of the docs, we will often refer to the `ZarfInitConfig` as an
 ### ZarfInitConfig
 The init package is the package you use to initialize your cluster to be ready to deploy other Zarf packages on to. 
 
-The init package needs to be run on every cluster you want to deploy another package onto, even if the clusters share the same host. Init packages will almost always be the first Zarf package you deploy onto a cluster. The only exception where you wouldn't use an init package first is if the machine you are deploying onto doesn't have a k8s cluster running yet, in those situations you can build a package that installs the k8s cluster itself (assuming you don't want the k3s option that the init package offers). 
+**The init package needs to be run on every cluster you want to deploy another package onto, even if the clusters share the same host.** If you don't have a cluster running yet, the init-package can help with that too! The init-package has a deployable k3s cluster as a component that can optionally be deployed onto your machine. An init-package will almost always be the first Zarf package you deploy onto a cluster since other packages will often depend on the services the package installs onto your cluster.
+> Note: The only exception where you wouldn't deploy an init package first is when you don't have a k8s cluster yet, you don't want to deploy with the k3s distro built into the init-package and you have a package that deploys your preferred distro. In those situations, you can deploy the distro package first, then the init-package, and then whatever other packages you want.) 
 
-While initializing, Zarf will seed your cluster with an container registry so it can have a place to push images that other packages will need. The init package will also optionally deploy other functionality to your cluster, such as a git-server to push repositories to, or a simple PLG logging stack so you can monitor the things running on your cluster.
+While initializing, Zarf will seed your cluster with an container registry so it can have a place to push images that other packages will need. The init package will also optionally deploy other functionality to your cluster, such as a git-server to push git repositories to, or a simple PLG logging stack so you can monitor the things running on your cluster.
 
+#### Using the init-package
 You initialize your cluster by running the command `zarf init`, which will search your current working directory for a file that matches the name `zarf-init-{ARCHITECTURE}.tar.zst` where the `ARCHITECTURE` matches the architecture of the host you are running on. If the machine your are deploying onto has a different machine architecture, you will have to specify the name of the architecture you are deploying onto. For example, if you are on a arm64 machine but are deploying on a amd64 machine, you will run `zarf init zarf-init-amd64.tar.zst`
 
 At the end of the day, init packages are just like other packages, meaning they can also be run with `zarf package deploy zarf-init-{ARCHITECTURE}.tar.zst`
 
 Init configs are not something you will have to create yourself unless you really want to customize how your cluster is installed / configured (i.e. if you wanted to use the init process to install a specifically configured k3s cluster onto your host machine), and even then it is often easier to create a specific package to do that before your run the init package.
 
-The registry seeding has a unique solution to the 'chicken or the egg' problem of having to get an image of the container registry onto the cluster before you actually have a container registry on the cluster to push to. If you're interested in how we solved that problem you can read about it [here](/docs/zarf-advanced/seeding-the-zarf-registry).
 
 ### ZarfPackageConfig
 'ZarfPackageConfigs' is any package that isn't an init package. These packages define named capabilities that you want to deploy onto your cluster. 
@@ -43,12 +44,27 @@ When Zarf is deploying the package, it will use the infrastructure that was crea
 
 ## What Makes Up A Package
 
-Zarf packages are split into smaller chunks called 'components'. These components are defined more [here](./zarf-components) but a quick way to understand components are as the actual named capabilities that packages provide.
+Zarf packages are split into smaller chunks called 'components'. These components are defined more [here](./zarf-components) but a quick way to understand components are as the actual named capabilities that packages provide. The schema of a zarf.yaml package follows the following format:
+
+
+```yaml
+kind: <STRING>              # Either ZarfPackageConfig or ZarfInitConfig
+metadata:
+    name: <STRING>          # The name of the package
+    description: <STRING>   # A description of the package
+seed: <STRING>              # Docker registry to seed the cluster with. Only used for init packages
+components: <OBJ LIST>      # Components definitions are complex and broken down more in the 'Understanding Zarf Components' page
+
+```
 
 
 ## Building A Package
 
-The process of define a package is covered in [these docs](../zarf-advanced/creating-your-own-package). Assuming you have a package already defined, building the package itself is fairly simple.
+The process of defining a package is covered in [these docs](../4-zarf-advanced/creating-your-own-package). Assuming you have a package already defined, building the package itself is fairly simple. 
 
 `zarf package create` will look for a `zarf.yaml` file in the current directory and build the package from that file. Behind the scenes, this is pulling down all the resources it needs from the internet and placing them in a temporary directory, once all the necessary resources of retrieved, Zarf will create the tarball of the temp directory and clean up the temp directory.
 
+
+## Inspecting a Built Package
+
+`zarf package inspect ./path/to/package.tar.zst` will look at the contents of the package and print out the contents of the zarf.yaml file that defined it.

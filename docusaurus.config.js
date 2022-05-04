@@ -46,7 +46,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'zarf-background/what-is-zarf',
+            docId: 'zarf-overview/what-is-zarf',
             position: 'left',
             label: 'Docs',
           },
