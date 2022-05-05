@@ -16,7 +16,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
+            to="/docs/zarf-background/what-is-zarf">
             Docusaurus Tutorial - 5min ⏱️
           </Link>
         </div>

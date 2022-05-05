@@ -31,7 +31,7 @@ At the end of the day, init packages are just like other packages, meaning they 
 
 Init configs are not something you will have to create yourself unless you really want to customize how your cluster is installed / configured (i.e. if you wanted to use the init process to install a specifically configured k3s cluster onto your host machine), and even then it is often easier to create a specific package to do that before your run the init package.
 
-The registry seeding has a unique solution to the 'chicken or the egg' problem of having to get an image of the container registry onto the cluster before you actually have a container registry on the cluster to push to. If you're interested in how we solved that problem you can read about it [here](/docs/zarf-advanced/3-seeding-the-zarf-registry).
+The registry seeding has a unique solution to the 'chicken or the egg' problem of having to get an image of the container registry onto the cluster before you actually have a container registry on the cluster to push to. If you're interested in how we solved that problem you can read about it [here](/docs/zarf-advanced/seeding-the-zarf-registry).
 
 ### ZarfPackageConfig
 'ZarfPackageConfigs' is any package that isn't an init package. These packages define named capabilities that you want to deploy onto your cluster. 
@@ -43,12 +43,12 @@ When Zarf is deploying the package, it will use the infrastructure that was crea
 
 ## What Makes Up A Package
 
-Zarf packages are split into smaller chunks called 'components'. These components are defined more [here](./2-zarf-components) but a quick way to understand components are as the actual named capabilities that packages provide.
+Zarf packages are split into smaller chunks called 'components'. These components are defined more [here](./zarf-components) but a quick way to understand components are as the actual named capabilities that packages provide.
 
 
 ## Building A Package
 
-The process of define a package is covered in [these docs](../zarf-advanced/1-creating-your-own-package). Assuming you have a package already defined, building the package itself is fairly simple.
+The process of define a package is covered in [these docs](../zarf-advanced/creating-your-own-package). Assuming you have a package already defined, building the package itself is fairly simple.
 
 `zarf package create` will look for a `zarf.yaml` file in the current directory and build the package from that file. Behind the scenes, this is pulling down all the resources it needs from the internet and placing them in a temporary directory, once all the necessary resources of retrieved, Zarf will create the tarball of the temp directory and clean up the temp directory.
 

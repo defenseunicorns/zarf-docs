@@ -66,7 +66,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/zarf-basics/what-is-zarf',
+                to: '/docs/zarf-background/what-is-zarf',
               },
             ],
           },
