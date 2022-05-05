@@ -18,7 +18,7 @@ Backed by tooling you already know (and love) & structured to fill the gaps you 
 
 ## Mandatory Components
 
-Zarf's work necessitates that some components are "always on" (a.k.a. required & cannot be disabled). These components are part of the default [init package](../zarf.yaml) and are always deployed whenever you perform a `zarf init` command. Those include:
+Zarf's work necessitates that some components are "always on" (a.k.a. required & cannot be disabled). These components are part of the default [init package](https://github.com/defenseunicorns/zarf/blob/master/zarf.yaml) and are always deployed whenever you perform a `zarf init` command. Those include:
 
 |                         | Description                                                                                                          |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -69,7 +69,7 @@ components:
      name: flux-v1.0.0
 ```
 
- Checkout the  [composable-packages](../examples/composable-packages/zarf.yaml) example to see this in action.
+ Checkout the  [composable-packages](https://github.com/defenseunicorns/zarf/blob/master/examples/composable-packages/zarf.yaml) example to see this in action.
 
 &nbsp;
 
@@ -151,4 +151,4 @@ components:
 
 ## Further Reading
 
-For more detail&mdash;like which components are on/off by default&mdash;there's no better place to check than the source: [zarf.yaml](../zarf.yaml).
+For more detail&mdash;like which components are on/off by default&mdash;there's no better place to check than the source: [zarf.yaml](https://github.com/defenseunicorns/zarf/blob/master/zarf.yaml).
