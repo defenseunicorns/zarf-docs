@@ -75,7 +75,7 @@ components:
     repos: <STRING LIST> # List of git repos the component will use.
                          # These repos will be pushed into the gitea server.
                          # This also means the git-server component needs to be deployed during `zarf init`.
-                         # Private repos need to have their credentialis listed in ~/.git-credentials as TODO @JPERRY
+                         # Private repos need to have their credentialis listed in ~/.git-credentials
 
 
     files: <OBJ LIST>           # Files to move onto the system that will be doing the `zarf package deploy` command
@@ -96,7 +96,7 @@ components:
     manifests: <OBJ LIST>             # Raw manifests that get converted into zarf-generated helm charts during deploy
       - name: <STRING>                # Name of the component
         namespace: <STRING>           # Namespace to install the manifest into
-                                      # TODO @JPERRY does this default to 'default'?
+                                      # This defaults to 'default'
         files: <STRING LIST>          #
         kustomizations: <STRING LIST> #
 

@@ -39,8 +39,8 @@ There are two ways to deploy optional components, you can either pass a comma se
 
 # What Makes the Init Package Special
 
-Deploying onto air-gapped environments is a [hard problem](../2-zarf-core-concepts/2-what-is-airgap.md), especially when the k8s environment you're deploying to doesn't have a container registry running for you to put your images into. This leads to a classic 'chicken or the egg' problem since the container registry image needs to make its way into the cluster but there is on container registry running on the cluster to push to yet because the image isn't in the cluster yet. In order to remain distro agnostic, we had to come up with a unique solution to seed the container registry into the cluster.
+Deploying onto air-gapped environments is a [hard problem](../zarf-core-concepts/what-is-airgap), especially when the k8s environment you're deploying to doesn't have a container registry running for you to put your images into. This leads to a classic 'chicken or the egg' problem since the container registry image needs to make its way into the cluster but there is on container registry running on the cluster to push to yet because the image isn't in the cluster yet. In order to remain distro agnostic, we had to come up with a unique solution to seed the container registry into the cluster.
 
 The `zarf-injector` [component](https://github.com/defenseunicorns/zarf/blob/master/packages/zarf-injector/zarf.yaml) within the init-package solves this problem by injecting a really small [Go registry binary](https://github.com/defenseunicorns/zarf/blob/master/src/injector/stage2/registry.go) into the cluster by splitting the binary into small enough chunks that would fit inside of a k8s ConfigMap. Once th config map is pushed onto the cluster, it gets stitched back together and runs to bootstrap the registry.
 
-More details about how we solved that problem is described [here](../4-zarf-advanced/3-seeding-the-zarf-registry).
+More details about how we solved that problem is described in the [Seeding the Zarf Registry page](../zarf-advanced/seeding-the-zarf-registry).

@@ -1,3 +1,1 @@
----
-sidebar_position: 3
----
+# Seeding the Zarf Registry
