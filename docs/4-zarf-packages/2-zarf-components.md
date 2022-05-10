@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Understanding Zarf Components
 
-While Zarf is fairly unopinionated regarding what runs in your cluster, that is not to say that it's completely indifferent. It has _distinct_ opinions, for example, about how to meet many common production application functionality needs&mdash;we call these opinions **components**. Think of components as something like named capabilities.
+The actual capabilities that Zarf Packages provided are defined within named components. These components define what dependencies they have and a declaritive definition of how it should be deployed. Each package can have as many components as the package creator wants but a package really isn't anything without at least one component.
 
 Components can define a wide range of resources that it needs when the package it is a part of gets deployed. The schema for the components is listed below but a high level look at the things components can define include:
  * Files to move onto the host
@@ -46,7 +46,7 @@ components:
      name: flux-v1.0.0
 ```
 
-> Note: When importing a component, Zarf will copy all of the values from the original component expect for the `required` key. In addition, while Zarf will copy the values, you have the ability to override the values for the `description` and `secretName` keys.
+> Note: When importing a component, Zarf will copy all of the values from the original component expect for the `required` key. In addition, while Zarf will copy the values, you have the ability to override the value for the `description` key.
 
  Checkout the [composable-packages](https://github.com/defenseunicorns/zarf/blob/master/examples/composable-packages/zarf.yaml) example to see this in action.
 
@@ -54,7 +54,13 @@ components:
 
 ## What Makes Up A Component
 Zarf components can contain any of the following key/value pairs. Technically, none of the keys are required and you can use as many or few that makes sense to get to desired functionality:
+
+
+<!-- TODO: @JPERRY this is out of date already.. Go through and redo..  -->
+<!-- TODO: @JPERRY is the short mention of the 5-minute timeout for scripts enough? -->
 ```yaml
+
+
 components:
   - name: <STRING> # A unique identifier for this component.
                    # The name can only contain alphabetical, numerical, or '-' characters.

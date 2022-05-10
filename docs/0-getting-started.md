@@ -20,3 +20,12 @@ Depending on how familiar you are with Kubernetes, DevOps, and Zarf, let's find 
 > Note: The packages in the 'example' directory are for example purposes only. They contain simple configuration that is not representative of a production ready environment. The packages in the 'packages' directory are a lot smaller and are designed be used to support other production packages (such as the init-package that we provide).
 
 * If you're already familiar with Zarf and want to find more information on how to create your own Zarf package, the [Creating Your Own Package](./zarf-advanced/creating-your-own-package) page is exactly what you're looking for.
+
+
+### Dependencies for Zarf CLI Dev
+
+
+### Dependencies for Zarf Package Deployments
+
+<!-- TODO: @JPERRY are there special dependencies for package dev? -->
+### Dependencies for Zarf Package Dev 

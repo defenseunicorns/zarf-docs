@@ -4,7 +4,6 @@ sidebar_position: 100
 
 # Docs Coming Soon
 
-* Default timeout length for scripts is 5 minutes
 * The fact that you could do composable packages (and how that works)
 * The fact that Zarf uses the ~/.git-credentials for private repos
     - [ ]  Is Zarf not able to use the ssh keys that are configured?
