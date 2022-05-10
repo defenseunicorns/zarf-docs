@@ -9,7 +9,7 @@ Check the table below to understand which distros which we test against & if the
 
 &nbsp;
 
-
+<!-- TODO: @JPERRY this support matrix could probably just go into a FAQ?  -->
 ## Support Matrix
 
 |OS             |VM_ID      |Notes|
@@ -24,7 +24,7 @@ Check the table below to understand which distros which we test against & if the
 
 &nbsp;
 
-
+<!-- TODO: @JPERRY Is any of the content below this comment actually useful? -->
 ## Demo Environments
 
 We support running an instance of Zarf _inside a local VM_ (of any of the [supported OSes](#support-matrix)) for test & demonstration purposes.

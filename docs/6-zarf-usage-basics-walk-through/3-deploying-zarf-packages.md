@@ -7,6 +7,6 @@ Now that we've gone over a bit about what Zarf and it's packages are, lets talk 
 
 
 # Getting the Zarf CLI Tool
-The [Zarf CLI](../zarf-basics/the-zarf-cli) is used to perform all the actions 
+The [Zarf CLI](../the-zarf-cli/the-zarf-cli) is used to perform all the actions 
 
 If you want to keep things simple, 

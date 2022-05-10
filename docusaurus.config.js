@@ -46,7 +46,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'zarf-overview/what-is-zarf',
+            docId: 'getting-started',
             position: 'left',
             label: 'Docs',
           },
@@ -66,7 +66,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/zarf-overview/what-is-zarf',
+                to: '/docs/getting-started',
               },
             ],
           },
