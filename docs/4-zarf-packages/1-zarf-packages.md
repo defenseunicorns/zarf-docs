@@ -12,8 +12,14 @@ The `zarf.yaml` file, that the package builds from, defines declarative instruct
 
 Zarf Packages are made up of functionality blocks called components which are described more in the [Zarf Components page](./zarf-components). These components can be optional, giving more flexibility to how packages can be used.
 
+<br />
+
+<!-- TODO: @JPERRY This feels out of place here.. -->
 ## Deploying on to Airgapped Systems
 Zarf packages are built with all the dependencies necessary being included within the package itself, this is important when deploying on to systems. Since there is no need for an outbound connection to the internet, these packages become highly distributable and can be run on edge, embedded systems, secure cloud, data centers, or even in a local environment. When deploying a package onto a cluster, the dependencies of the cluster (which were included in the package itself when it was created) are pushed into a docker registry and git server that Zarf stands up on the airgapped system. This way later steps can use the dependencies as they are needed.
+
+<br />
+<br />
 
 ## Types of Zarf Packages
 There are two types of Zarf packages, a `ZarfInitConfig` and a `ZarfPackageConfig`. The package type is defined by the `kind:` field in the zarf.yaml file.
@@ -45,6 +51,8 @@ You can deploy a Zarf package with the command `zarf package deploy` which will 
 
 When Zarf is deploying the package, it will use the infrastructure that was created when doing the 'init' process (such as the docker registry and git server) to push all of the images and repos that the package needs to operate.
 
+<br />
+<br />
 
 ## What Makes Up A Package
 
@@ -61,6 +69,8 @@ components: <OBJ LIST>      # Components definitions are complex and broken down
 
 ```
 
+<br />
+<br />
 
 ## Building A Package
 
@@ -68,6 +78,8 @@ The process of defining a package is covered in the [Creating Your Own Package](
 
 `zarf package create` will look for a `zarf.yaml` file in the current directory and build the package from that file. Behind the scenes, this is pulling down all the resources it needs from the internet and placing them in a temporary directory, once all the necessary resources of retrieved, Zarf will create the tarball of the temp directory and clean up the temp directory.
 
+<br />
+<br />
 
 ## Inspecting a Built Package
 

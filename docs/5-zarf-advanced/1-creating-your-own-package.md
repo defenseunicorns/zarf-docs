@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # Defining and Deploying Your Own Zarf Package
 
-At this point you should be slightly familiar with Zarf.  If you're new to Zarf, you should start by reading the [What is Zarf](../zarf-overview/what-is-zarf) page.
+At this point you should be slightly familiar with Zarf.  If you're new to Zarf, you should start by reading the [What is Zarf](../zarf-overview) page.
 
 
 # Types of Zarf Packages
-There are two types of Zarf packages, a `ZarfInitConfig` and a `ZarfPackageConfig`. The package type is defined by the `kind:` field in the zarf.yaml file. Zarf init configs were mentioned briefly in the [What is Zarf](../zarf-overview/what-is-zarf) page as the package you use to initialize your cluster to be ready to deploy other Zarf packages onto. Init configs are very rarely something you're going to have to create yourself and this document will be going over the `ZarfPackageConfig` instead.
+There are two types of Zarf packages, a `ZarfInitConfig` and a `ZarfPackageConfig`. The package type is defined by the `kind:` field in the zarf.yaml file. Zarf init configs were mentioned briefly in the [What is Zarf](../zarf-overview) page as the package you use to initialize your cluster to be ready to deploy other Zarf packages onto. Init configs are very rarely something you're going to have to create yourself and this document will be going over the `ZarfPackageConfig` instead.
 
 
 # What is a Zarf Package

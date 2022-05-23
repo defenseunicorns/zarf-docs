@@ -1,11 +1,39 @@
-# Getting Started
+# Quick Start
 Welcome to the documentation about Zarf, the air-gap tool!
+<!-- TODO @JPERRY Rename this page to Quick Start -->
+
 # Installing Zarf
 <!-- TODO: @JPERRY Look at how other tools/apps do their instillation instructions -->
 Until we get Zarf into common package managers, you can install the Zarf CLI by:
-1. Download the latest release version from our [GitHub release page](https://github.com/defenseunicorns/zarf/releases).
+1. Downloading the latest release version for your machine from our [GitHub release page](https://github.com/defenseunicorns/zarf/releases).
 2. Move the downloaded file onto your path. This can be done in your terminal with the command `mv ~/Downloads/{DOWNLOADED_RELEASE_FILE} /usr/local/bin/zarf`
 3. Test out the CLI within your terminal with the command `zarf -version`. The version you downloaded from GitHub should print to your terminal.
+
+<br />
+<br />
+
+# Zarf Dependencies/Prerequisites
+
+### Dependencies for Zarf CLI Dev
+ - [Go 1.18.x](https://go.dev/doc/install)
+ - [make](https://www.gnu.org/software/make/)
+
+
+### Dependencies for Zarf Package Deployments
+ - A Zarf CLI ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./the-zarf-cli/building-your-own-cli))
+ - A Zarf init package ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./the-zarf-cli/building-your-own-cli))
+ - A Zarf Package (provided externally or [manually built](./zarf-packages/zarf-packages#building-a-package))
+ - kube-context into a k8s cluster 
+    - (NOTE: Not needed if you plan on deploying the cluster with `zarf init` step)
+
+### Dependencies for Zarf Package Dev 
+ - A local k8s cluster to work with ([k3s](https://k3s.io/)/[k3d](https://k3d.io/v5.4.1/)/[KinD](https://kind.sigs.k8s.io/docs/user/quick-start#installation))
+ - A Zarf CLI ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./the-zarf-cli/building-your-own-cli))
+ - A Zarf init package ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./the-zarf-cli/building-your-own-cli))
+
+
+<br />
+<br />
 
 
 # Where to next?
@@ -20,12 +48,3 @@ Depending on how familiar you are with Kubernetes, DevOps, and Zarf, let's find 
 > Note: The packages in the 'example' directory are for example purposes only. They contain simple configuration that is not representative of a production ready environment. The packages in the 'packages' directory are a lot smaller and are designed be used to support other production packages (such as the init-package that we provide).
 
 * If you're already familiar with Zarf and want to find more information on how to create your own Zarf package, the [Creating Your Own Package](./zarf-advanced/creating-your-own-package) page is exactly what you're looking for.
-
-
-### Dependencies for Zarf CLI Dev
-
-
-### Dependencies for Zarf Package Deployments
-
-<!-- TODO: @JPERRY are there special dependencies for package dev? -->
-### Dependencies for Zarf Package Dev 
