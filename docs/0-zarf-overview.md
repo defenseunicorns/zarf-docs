@@ -8,7 +8,7 @@ Zarf is a tool that simplifies the setup & administration of Kubernetes clusters
 
 It provides a static Go binary CLI that can be run anywhere. This CLI can pull, package, and install all the things your clusters need to run and any necessary resources to standup infrastructure (such as Terraform). 
 
-Zarf runs on [a bunch of operating systems](./supported-oses).
+Zarf runs on [a bunch of operating systems](./operator-manual/supported-oses).
 
 <br />
 <br />

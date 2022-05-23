@@ -4,7 +4,7 @@ The Zarf tool is a statically built Go binary. The Zarf CLI is used to perform o
 
 The Zarf CLI is a completely open-source project  
 
-You can download a prebuilt release copy of the CLI from our [GitHub releases page](https://github.com/defenseunicorns/zarf/releases) or build your own manually by following the steps listed in the [building your own cli page](./the-zarf-cli/building-your-own-cli).
+You can download a prebuilt release copy of the CLI from our [GitHub releases page](https://github.com/defenseunicorns/zarf/releases) or build your own manually by following the steps listed in the [building your own cli page](./building-your-own-cli).
 
 
 ## I have a CLI.. Now What?

@@ -1,6 +1,5 @@
-# Quick Start
+# Getting Started
 Welcome to the documentation about Zarf, the air-gap tool!
-<!-- TODO @JPERRY Rename this page to Quick Start -->
 
 # Installing Zarf
 <!-- TODO: @JPERRY Look at how other tools/apps do their instillation instructions -->
@@ -20,16 +19,16 @@ Until we get Zarf into common package managers, you can install the Zarf CLI by:
 
 
 ### Dependencies for Zarf Package Deployments
- - A Zarf CLI ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./the-zarf-cli/building-your-own-cli))
- - A Zarf init package ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./the-zarf-cli/building-your-own-cli))
- - A Zarf Package (provided externally or [manually built](./zarf-packages/zarf-packages#building-a-package))
+ - A Zarf CLI ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./user-guide/the-zarf-cli/building-your-own-cli))
+ - A Zarf init package ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./user-guide/the-zarf-cli/building-your-own-cli))
+ - A Zarf Package (provided externally or [manually built](./user-guide/zarf-packages/zarf-packages#building-a-package))
  - kube-context into a k8s cluster 
     - (NOTE: Not needed if you plan on deploying the cluster with `zarf init` step)
 
 ### Dependencies for Zarf Package Dev 
  - A local k8s cluster to work with ([k3s](https://k3s.io/)/[k3d](https://k3d.io/v5.4.1/)/[KinD](https://kind.sigs.k8s.io/docs/user/quick-start#installation))
- - A Zarf CLI ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./the-zarf-cli/building-your-own-cli))
- - A Zarf init package ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./the-zarf-cli/building-your-own-cli))
+ - A Zarf CLI ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./user-guide/the-zarf-cli/building-your-own-cli))
+ - A Zarf init package ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./user-guide/the-zarf-cli/building-your-own-cli))
 
 
 <br />
@@ -40,11 +39,12 @@ Until we get Zarf into common package managers, you can install the Zarf CLI by:
 <!-- TODO: @JPERRY The goal of this section is to point the different user personas in the right direction. Is this achieving that? -->
 Depending on how familiar you are with Kubernetes, DevOps, and Zarf, let's find what set of information would be most useful to you!
 
-* If you're still not sure you understand the problem Zarf is trying to solve, it might useful to read through the 'Zarf Domain' section to get a better idea about the when/where/what Zarf is trying to help you achieve, starting with [What is Kubernets](./zarf-domain/what-is-kubernetes).
+* If you're still not sure you understand the problem Zarf is trying to solve, it might useful to read through the 'Zarf Domain' section to get a better idea about the when/where/what Zarf is trying to help you achieve, starting with [What is Kubernets](./understand-the-basics#what-is-kubernetes).
 
-* If you're new to Zarf and want to understand more about what Zarf is 'under the hood' and how the Zarf packages are defined. Following the 'Zarf Basics' is probably best place for you. These guides give a higher level explication about how Zarf and it's packages work.  starting with the [Zarf CLI](./the-zarf-cli/the-zarf-cli) page.
+* If you're new to Zarf and want to understand more about what Zarf is 'under the hood' and how the Zarf packages are defined. Following the 'Zarf Basics' is probably best place for you. These guides give a higher level explication about how Zarf and it's packages work.  starting with the [Zarf CLI](./user-guide/the-zarf-cli/the-zarf-cli) page.
 
 * If you want to see some practical examples of what Zarf packages can do (and potentially try them out for yourself), the [examples directory](https://github.com/defenseunicorns/zarf/tree/master/examples) or the [packages directory](https://github.com/defenseunicorns/zarf/tree/master/packages) in the GitHub repo is probaby what you're looking for. Each example within the examples directory contains a set of README instructions for how you can deploy the example yourself.
 > Note: The packages in the 'example' directory are for example purposes only. They contain simple configuration that is not representative of a production ready environment. The packages in the 'packages' directory are a lot smaller and are designed be used to support other production packages (such as the init-package that we provide).
 
-* If you're already familiar with Zarf and want to find more information on how to create your own Zarf package, the [Creating Your Own Package](./zarf-advanced/creating-your-own-package) page is exactly what you're looking for.
+<!-- TODO: Fix this link.. -->
+* If you're already familiar with Zarf and want to find more information on how to create your own Zarf package, the [Creating Your Own Package](http://google.com) page is exactly what you're looking for.
