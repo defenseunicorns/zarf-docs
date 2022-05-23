@@ -1,4 +1,9 @@
 # Getting Started
+
+:::caution Hard Hat Area
+This page is still being developed. More content will be added soon!
+:::
+
 Welcome to the documentation about Zarf, the air-gap tool!
 
 # Installing Zarf
@@ -8,7 +13,6 @@ Until we get Zarf into common package managers, you can install the Zarf CLI by:
 2. Move the downloaded file onto your path. This can be done in your terminal with the command `mv ~/Downloads/{DOWNLOADED_RELEASE_FILE} /usr/local/bin/zarf`
 3. Test out the CLI within your terminal with the command `zarf -version`. The version you downloaded from GitHub should print to your terminal.
 
-<br />
 <br />
 
 # Zarf Dependencies/Prerequisites
@@ -31,7 +35,6 @@ Until we get Zarf into common package managers, you can install the Zarf CLI by:
  - A Zarf init package ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./user-guide/the-zarf-cli/building-your-own-cli))
 
 
-<br />
 <br />
 
 

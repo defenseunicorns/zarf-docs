@@ -34,8 +34,8 @@ These optional components for the init package are listed below along with the "
 There are two ways to deploy optional components, you can either pass a comma separated list of components to the `--components` flag such as `zarf init --components k3s,git-server --confirm` or you can exclude the flags and say yes/no as each optional component gets prompted to you.
 
 > Note: The 'k3s' component requires root access when deploying as it will modify your host machine to install the cluster.
-&nbsp;
 
+<br />
 
 # What Makes the Init Package Special
 
