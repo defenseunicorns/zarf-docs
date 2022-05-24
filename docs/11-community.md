@@ -9,4 +9,4 @@ This page is still being developed. More content will be added soon!
 - [Zarf LinkedIn Project](https://www.linkedin.com/company/zarf-project/)
 
 
-- link to dev twitter (we don't have a zarf specific twitter yet but maybe we can link to the devs if they want?)
+<!-- TODO: link to dev twitter (we don't have a zarf specific twitter yet but maybe we can link to the devs if they want?) -->
