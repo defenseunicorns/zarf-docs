@@ -4,19 +4,21 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 
 # Temporary Defense Unicorn notes for deploying locally
 ```
-# Install npm if you don't have npm installed
-sudo apt update
-sudo apt install nodejs
-sudo apt install npm
 
-# Install npx (if you don't already have it)
-npm install -g npx
+# Install npm if you don't have npm installed (on MacOS)
+# FOR LINUX
+    sudo apt update
+    sudo apt install nodejs
+    sudo apt install npm
+# FOR MAC
+    brew install nodejs
 
-# Download the docusaurus tool
-npx create-docusaurus@latest zarf-docs classic
+---
 
-# Start the server locally 
-npx docusaurus start                               # starts hosing on localhost:3000
+# FOR EVERYONE
+# Install all the things, and run the server locally
+npm i
+npm run start
 ```
 
 
