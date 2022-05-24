@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
   organizationName: 'Defense Unicorns', // Usually your GitHub org/user name.
   projectName: 'Zarf', // Usually your repo name.
 
@@ -40,13 +40,15 @@ const config = {
       navbar: {
         title: 'Zarf Docs',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Zarf',
+          src: 'img/favicon.svg',
+          href: 'https://zarf.dev/',
+          target: '_self',
         },
         items: [
           {
             type: 'doc',
-            docId: 'getting-started',
+            docId: 'zarf-overview',
             position: 'left',
             label: 'Docs',
           },
@@ -65,7 +67,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Getting Started',
                 to: '/docs/getting-started',
               },
             ],
