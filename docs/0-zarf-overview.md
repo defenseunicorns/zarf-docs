@@ -1,30 +1,83 @@
+import TabItem from "@theme/TabItem";
+import Tabs from "@theme/Tabs";
+
 # Overview
 
-# What is Zarf?
+![Zarf Underwater](../static/img/Zarf%20Left%20Underwater%20-%20Behind%20rock.svg)
 
-![Zarf](../static/img/zarf-logo.png)
+## What is Zarf?
 
-Zarf is a tool that simplifies the setup & administration of Kubernetes clusters, cyber systems & workloads that support DevSecOps "across the [air gap](https://en.wikipedia.org/wiki/Air_gap_(networking))."
+Zarf is an open-source tool that simplifies the setup & deployment of applications and resources onto AirGap or disconnected environments. You can think of a disconnected environment as a system that has the has limited connection to the internet, kind of like airplane mode.
 
-It provides a static Go binary CLI that can be run anywhere. This CLI can pull, package, and install all the things your clusters need to run and any necessary resources to standup infrastructure (such as Terraform). 
+Zarf equips you with the ability to quickly and securely deploy modern software onto these types of systems without relying on internet connectivity. It also simplifies the installation, updating, and maintenance of DevSecOps capabilities like Kubernetes clusters, logging, and SBOM compliance out of the box. Most importantly Zarf keeps applications and systems running even when they are disconnected.
 
-Zarf runs on [a bunch of operating systems](./operator-manual/supported-oses).
+## How Zarf works?
 
-<br />
-<br />
+Zarf uses a static Go binary CLI that can be run on any machine, with or without internet connectivity. The Zarf CLI equips users with the ability to pull, package, and install all the resources their applications or clusters need to run without being connected to the internet. It can also deploy any necessary resources needed to stand up infrastructure tools (such as Terraform).
 
-# Why Use Zarf?
-Most of the software ecosystem assumes your systems have access to the internet. The world (for good reasons) has become more and more dependent upon Software as a Service (SaaS), which assumes a robust connection to the internet and a willingness to inherently trust 3rd party providers. Although this makes sense for most of the world, certain secure systems must operate either fully disconnected, semi-disconnected, or might need the ability to disconnect in case of emergencies (like while under an active cyber attack). Although only a small percentage of systems, these secure systems make up some of the most vital systems globally, such as Aerospace and Defense, Finance, Healthcare, Energy, Water, Sewage, and many Federal, Local, and State Government systems.  
+All that is needed to deploy your infrastructure, application, and resources in a disconnected environment is 3 files; the Zarf CLI binary, the Zarf init package, and a Zarf Package containing your app and resources.
 
-<br />
-<br />
+![Zarf CLI + Zarf Init + Zarf Package](../static/img/Zarf%20Files%20-%20%203%20Bubbles.svg)
 
-# Explain Zarf Like I'm Ten(ish)
+:::note
 
-Zarf allows you to bundle portions of "the internet" into a single package to be installed later following specific instructions. A Zarf package is just a single file that includes everything you need to manage a system or capability while fully disconnected. Think of a disconnected system as a system that always is or sometimes is on airplane mode.
+For more information on how zarf works under the hood visit our [Nerd Notes page](../docs/6-developer-guide/3-nerd-notes.md)
 
-You bring this single file (we call it a package) to the system you want to install or update new software on. The package includes instructions on how to assemble all the pieces of software (components) once on the other side. These instructions are fully "declarative," which means that everything is represented by code and automated instead of manual. The hardest part is assembling the declarative package on the connected side. But once everything is packaged, Zarf makes even very complex systems easy to install, update, and maintain within disconnected systems.
+:::
 
-Such packages also become highly distributable, as they can now run on edge, embedded systems, secure cloud, data centers, or even in a local environment. This is incredibly helpful for organizations that need to integrate and deploy software from multiple, secure development environments from disparate development teams into disconnected IT operational environments. Zarf helps ensure that development teams can integrate with the production environment they are deploying to, even if they will never actually touch that environment.
+## Why Use Zarf?
 
-Zarf makes DevSecOps for air gap possible.
+- **Free and Open Source.** Zarf will always be free to use and open source.
+- **No Vender Lock.** There is no proprietary software that locks you into using Zarf. If you want to remove it, you still can use your help charts to deploy your software manually.
+- **OS Agnostic.** Zarf supports numerous operating systems.
+  - For a full list of the OS zarf supports, check out [Supported OSes](../docs/5-operator-manual/90-supported-oses.md)
+- **Highly Distributable.** Zarf packages are highly distributable. They can run on edge, embedded systems, secure cloud, data centers, or even in a local environment.
+  - This is incredibly helpful for organizations that need to integrate and deploy software from multiple, secure development environments from disparate development teams into disconnected IT operation.
+- **Develop Connected Deploy Disconnected.** Teams can build, and configure individual applications or entire DevSecOps environments while connected to the internet and then package and ship them to a disconnected environment to be deployed using Zarf.
+- **Single File Deployments.** Zarf allows you to package just the parts of the internet your app needs into a single compressed file to be installed without connectivity.
+
+## Quick Start
+
+:::info
+
+This quick start requires you to already have [home brew](https://brew.sh/) package manager installed on your machine.
+For more install options please visit our [Getting Started page](3-getting-started.md)
+
+:::
+
+To download the Zarf CLI Binary,
+
+1.  Select your systems OS below
+2.  copy and past the quick start command into your computers terminal.
+
+<Tabs>
+<TabItem value="macOS" label="macOS" default>
+
+```bash
+brew tap defenseunicorns/tap
+brew install zarf
+```
+
+</TabItem>
+<TabItem value="Linux" label="Linux">
+
+```bash
+brew tap defenseunicorns/tap
+brew install zarf
+```
+
+</TabItem>
+<TabItem value="Windows" label="Windows">
+
+```bash
+Coming Soon!
+```
+
+</TabItem>
+</Tabs>
+
+## Features
+
+## Design Principles
+
+## Development Status
