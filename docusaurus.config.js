@@ -1,33 +1,33 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Zarf Documentation',
-  tagline: 'Airgap is hard. Docs are too.',
-  url: 'https://zarf.dev',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.svg',
-  organizationName: 'Defense Unicorns', // Usually your GitHub org/user name.
-  projectName: 'Zarf', // Usually your repo name.
+  title: "Zarf Documentation",
+  tagline: "Airgap is hard. Docs are too.",
+  url: "https://zarf.dev",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.svg",
+  organizationName: "Defense Unicorns", // Usually your GitHub org/user name.
+  projectName: "Zarf", // Usually your repo name.
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: 'https://github.com/defenseunicorns/zarf-docs/tree/main/',
+          editUrl: "https://github.com/defenseunicorns/zarf-docs/tree/main/",
         },
         blog: false,
         theme: {
-          customCss: [require.resolve('./src/css/custom.css')],
+          customCss: [require.resolve("./src/css/custom.css")],
         },
       }),
     ],
@@ -37,46 +37,46 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: 'dark',
-        disableSwitch: true,
+        defaultMode: "dark",
+        disableSwitch: false,
       },
       navbar: {
-        title: 'Zarf Docs',
+        title: "Zarf Docs",
         logo: {
-          alt: 'Zarf',
-          src: 'img/favicon.svg',
-          href: 'https://zarf.dev/',
-          target: '_self',
+          alt: "Zarf",
+          src: "img/favicon.svg",
+          href: "https://zarf.dev/",
+          target: "_self",
         },
         items: [
           {
-            type: 'doc',
-            docId: 'zarf-overview',
-            position: 'left',
-            label: 'Docs',
+            type: "doc",
+            docId: "zarf-overview",
+            position: "left",
+            label: "Docs",
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/defenseunicorns/zarf',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/defenseunicorns/zarf",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Getting Started',
-                to: '/docs/getting-started',
+                label: "Getting Started",
+                to: "/docs/getting-started",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
                 label: 'Slack',
@@ -85,7 +85,7 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
                 label: 'GitHub',
