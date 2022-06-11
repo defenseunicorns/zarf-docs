@@ -80,7 +80,7 @@ const config = {
             items: [
               {
                 label: 'Slack',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://kubernetes.slack.com/archives/C03B6BJAUJ3',
               },
             ],
           },
@@ -89,12 +89,12 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/defenseunicorns/zarf',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: darkCodeTheme,
