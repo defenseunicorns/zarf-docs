@@ -76,21 +76,3 @@ Coming Soon!
 </TabItem>
 </Tabs>
 
-## Features
-
-### Out of the Box
-
-- **Seed Git Registry**
-- **Initialize a Cluster**
-- **Automatic SBOM Generation** With UI Dashboard
-- **Package Signing**
-- **K8 Dashboard**
-- **Logging**
-
-### Configurable
-
-- **Flux**
-
-## Design Principles
-
-## Development Status
