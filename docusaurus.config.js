@@ -38,7 +38,7 @@ const config = {
     ({
       colorMode: {
         defaultMode: "dark",
-        disableSwitch: false,
+        disableSwitch: true,
       },
       navbar: {
         title: "Zarf Docs",
@@ -79,8 +79,8 @@ const config = {
             title: "Community",
             items: [
               {
-                label: 'Slack',
-                href: 'https://kubernetes.slack.com/archives/C03B6BJAUJ3',
+                label: "Slack",
+                href: "https://kubernetes.slack.com/archives/C03B6BJAUJ3",
               },
             ],
           },
@@ -88,8 +88,8 @@ const config = {
             title: "More",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/defenseunicorns/zarf',
+                label: "GitHub",
+                href: "https://github.com/defenseunicorns/zarf",
               },
             ],
           },
