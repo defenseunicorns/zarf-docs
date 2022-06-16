@@ -78,7 +78,7 @@ components: <OBJ LIST> # Components definitions are complex and broken down more
 
 ## Building A Zarf Package
 
-<!-- TODO: Fix this link.. -->
+<!-- TODO: @jperry Fix this link.. -->
 
 :::info
 
