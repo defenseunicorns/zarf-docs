@@ -1,6 +1,6 @@
-#Zarf Packages
+# Zarf Packages
 
-## What is a Zarf package?
+## What is a Zarf Package?
 
 Zarf allows you to bundle portions of "the internet" into a single package to be installed later following specific instructions. A Zarf package is just a single tarball file that includes everything you need to manage a system or capability while fully disconnected. Think of a disconnected system as a system that always is or sometimes is on airplane mode.
 
@@ -25,4 +25,4 @@ Such packages also become highly distributable, as they can now run on edge, emb
 
   - (NOTE: Not needed if you plan on deploying the cluster with `zarf init` step)
 
-  :::
+:::
