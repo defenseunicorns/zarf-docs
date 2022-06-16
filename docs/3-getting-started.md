@@ -62,23 +62,6 @@ If you are not seeing that, then it's possible that Zarf was not installed onto 
 
 <br />
 
-## Zarf Dependencies/Prerequisites
-
-### Dependencies for Zarf CLI Dev
-
-- [Go 1.18.x](https://go.dev/doc/install)
-- [make](https://www.gnu.org/software/make/)
-
-### Dependencies for Zarf Package Deployments
-
-- A Zarf CLI ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./user-guide/the-zarf-cli/building-your-own-cli))
-- A Zarf init package ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./user-guide/the-zarf-cli/building-your-own-cli))
-- A Zarf Package (provided externally or [manually built](./user-guide/zarf-packages/zarf-packages#building-a-package))
-- kube-context into a k8s cluster
-  - (NOTE: Not needed if you plan on deploying the cluster with `zarf init` step)
-
-<br />
-
 ## Where to next?
 
 Depending on how familiar you are with Kubernetes, DevOps, and Zarf, let's find what set of information would be most useful to you!
