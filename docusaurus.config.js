@@ -41,10 +41,9 @@ const config = {
         disableSwitch: true,
       },
       navbar: {
-        title: "Zarf Docs",
         logo: {
           alt: "Zarf",
-          src: "img/favicon.svg",
+          src: "img/zarf-logo-small.svg",
           href: "https://zarf.dev/",
           target: "_self",
         },
@@ -55,10 +54,17 @@ const config = {
             position: "left",
             label: "Docs",
           },
+          {
+            position: "left",
+            label: "Product",
+            to: "https://zarf.dev",
+            target: "_self",
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: "https://github.com/defenseunicorns/zarf",
-            label: "GitHub",
+            // html: `<img src="/img/favicon.svg" />`,
+            label: "Github",
             position: "right",
           },
         ],
