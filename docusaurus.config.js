@@ -2,6 +2,11 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const svgToString = require("./utils/svg-to-string");
+const SlackIconString = svgToString("static/img/SlackIcon.svg");
+const GithubIconString = svgToString("static/img/GithubIcon.svg");
+const GITHUB_URL = "https://github.com/defenseunicorns/zarf";
+const SLACK_URL = "https://zarf.dev/slack";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -62,10 +67,25 @@ const config = {
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: "https://github.com/defenseunicorns/zarf",
-            // html: `<img src="/img/favicon.svg" />`,
-            label: "Github",
             position: "right",
+            class: "navbar__item navbar__link svg-link",
+            href: SLACK_URL,
+            html: SlackIconString,
+          },
+          {
+            class: "navbar__item navbar__link svg-link",
+            href: GITHUB_URL,
+            html: GithubIconString,
+            position: "right",
+          },
+          {
+            type: "html",
+            value: `
+            <div class="socials-box">
+              <a class="menu__link svg-menu-link svg-link" href="${SLACK_URL}">${SlackIconString}</a>
+              <a class="menu__link svg-menu-link svg-link" href="${GITHUB_URL}">${GithubIconString}</a>
+            <div>
+             `,
           },
         ],
       },
