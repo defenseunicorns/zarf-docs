@@ -7,7 +7,7 @@ const SocialsValues = {
   githubUrl: "https://github.com/defenseunicorns/zarf",
 };
 
-function SocialsBox({ containerId = "", linkClass = "" }) {
+function SocialsBox({ containerId = "", linkClass = "" } = {}) {
   return `
     <div id="${containerId}" class="socials-box">
         <a class="svg-link ${linkClass}" href="${SocialsValues.slackUrl}">

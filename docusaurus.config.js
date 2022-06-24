@@ -84,7 +84,7 @@ const config = {
         copyright: `<p class="p-copy">Copyright © ${new Date().getFullYear()} Zarf Project, All rights reserved.</p>`,
         links: [
           {
-            html: SocialsBox({}),
+            html: SocialsBox(),
           },
         ],
         // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
