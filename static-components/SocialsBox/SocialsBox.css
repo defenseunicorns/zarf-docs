@@ -1,0 +1,27 @@
+.socials-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.svg-icon-path {
+  fill: var(--ifm-navbar-link-color);
+}
+
+.svg-icon {
+  height: var(--svg-icon-height);
+  display: flex;
+  align-items: center;
+}
+
+.svg-link {
+  max-width: fit-content;
+  border-radius: 50px !important;
+  border: solid;
+  border-color: transparent;
+  padding: 12px;
+}
+
+.svg-link:hover .svg-icon-path {
+  fill: var(--ifm-navbar-link-hover-color);
+}

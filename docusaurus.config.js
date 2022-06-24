@@ -2,11 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-const svgToString = require("./utils/svg-to-string");
-const SlackIconString = svgToString("static/img/SlackIcon.svg");
-const GithubIconString = svgToString("static/img/GithubIcon.svg");
-const GITHUB_URL = "https://github.com/defenseunicorns/zarf";
-const SLACK_URL = "https://zarf.dev/slack";
+const { SocialsBox } = require("./static-components/SocialsBox/SocialsBox");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -48,7 +44,8 @@ const config = {
       navbar: {
         logo: {
           alt: "Zarf",
-          src: "img/zarf-logo-small.svg",
+          src: "img/zarf-logo-light.svg",
+          srcDark: "img/zarf-logo-dark.svg",
           href: "https://zarf.dev/",
           target: "_self",
         },
@@ -67,25 +64,12 @@ const config = {
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            position: "right",
-            class: "navbar__item navbar__link svg-link",
-            href: SLACK_URL,
-            html: SlackIconString,
-          },
-          {
-            class: "navbar__item navbar__link svg-link",
-            href: GITHUB_URL,
-            html: GithubIconString,
-            position: "right",
-          },
-          {
             type: "html",
-            value: `
-            <div class="socials-box">
-              <a class="menu__link svg-menu-link svg-link" href="${SLACK_URL}">${SlackIconString}</a>
-              <a class="menu__link svg-menu-link svg-link" href="${GITHUB_URL}">${GithubIconString}</a>
-            <div>
-             `,
+            position: "right",
+            className: "navbar__item--socials-box",
+            value: SocialsBox({
+              linkClass: "menu__link",
+            }),
           },
         ],
       },

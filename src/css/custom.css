@@ -16,7 +16,8 @@
   --ifm-background-color: #0a0e2e;
   --ifm-background-surface-color: #0d133d;
   --ifm-code-font-size: 95%;
-  --svg-icon-height: 24px;
+  --svg-icon-height: 28px;
+  --ifm-navbar-height: 5rem;
 }
 
 html[data-theme="dark"] {
@@ -50,57 +51,72 @@ html[data-theme="dark"] {
   background-color: #0a0e2e;
 }
 
-/* Navbar */
+/* || NAVBAR */
+
 .navbar {
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12);
 }
 
-.navbar__item {
-  font-size: larger;
-  font-weight: 400;
+/* Zarf.dev logo size */
+.navbar__logo {
+  width: 156px;
+  height: 64px;
 }
 
+/* Zarf.dev padding and styling */
+.navbar__item {
+  display: flex;
+  font-size: large;
+  font-weight: 400;
+  height: 48px;
+  padding: 12px 16px 12px 16px;
+  align-items: center;
+}
+
+/* override docusaurus fields at their breakpoint */
+@media (max-width: 996px) {
+  /* Center the logo on smaller screens */
+  .navbar__items .navbar__brand {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* Shrink the logo on smaller screens */
+  .navbar__logo {
+    height: 40px;
+  }
+
+  /* 
+   * Restore original functionality from template 
+   * that was removed to center text and hover state
+  */
+  .navbar__item {
+    display: none;
+  }
+}
+
+/* Add Selection Line to bottom of selected navbar item */
 .navbar__link--active {
   border-bottom: 2px solid var(--ifm-color-primary);
 }
 
-/* NavBar - svg-icons */
-.navbar__item .svg-icon-path {
-  fill: var(--ifm-navbar-link-color);
-}
-
-.navbar__item .svg-icon {
-  height: var(--svg-icon-height);
-}
-
-.navbar__item .svg-icon {
-  display: flex;
-  align-items: center;
-}
-
-.svg-link {
-  margin-left: 4px;
-  margin-right: 4px;
-  border-radius: 50px;
-  border: solid;
-  border-color: transparent;
-  padding: 10px;
-}
-
+/* Add hover state highlighting background to navbar__items */
 .navbar__item:hover {
   background-color: var(--ifm-menu-color-background-active);
 }
 
-.navbar__item:hover .svg-icon-path {
-  fill: var(--ifm-navbar-link-hover-color);
+/* Remove Hover state from navbar socials box */
+.navbar__item--socials-box:hover {
+  background-color: unset;
 }
 
-.navbar__item .socials-box {
-  display: none;
+/* Remove Padding from navbar socials box */
+.navbar__item--socials-box {
+  padding: unset;
 }
 
-/* Mobile Navbar (menu)*/
+/* || MOBILE NAVBAR (MENU) */
 
 .menu {
   background-color: var(--ifm-background-surface-color);
@@ -108,42 +124,20 @@ html[data-theme="dark"] {
     0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
 }
 
+/* Remove rounded links */
 .menu__link {
   border-radius: 0;
 }
 
+/* Highlight text on hover */
 .menu__link:hover {
   color: var(--ifm-navbar-link-hover-color);
 }
 
-.menu__link .svg-icon {
-  height: var(--svg-icon-height);
-}
-
-.menu__link .svg-icon-path {
-  fill: var(--ifm-navbar-link-color);
-}
-.menu__link:hover .svg-icon-path {
-  fill: var(--ifm-navbar-link-hover-color);
-}
-
-.socials-box {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.socials-box .svg-menu-link {
-  max-width: fit-content;
-  border-radius: 50px;
-  border: solid;
-  border-color: transparent;
-  padding: 12px;
-}
-.socials-box .svg-menu-link .svg-icon {
-  height: 32px;
-}
-
+/* 
+ * Customize Main Menu to look like zarf.dev mobile drawer
+ * Without effecting the table of contents. 
+ */
 [class="menu__list-item"] .menu__link {
   justify-content: center;
   font-size: x-large;
@@ -151,6 +145,7 @@ html[data-theme="dark"] {
   margin-bottom: 16px;
 }
 
+/* Underline the active link and only the active link */
 [class="menu__link menu__link--active"] {
   border-bottom: 2px solid var(--ifm-color-primary);
 }
