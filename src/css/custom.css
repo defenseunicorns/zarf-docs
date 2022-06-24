@@ -149,3 +149,41 @@ html[data-theme="dark"] {
 [class="menu__link menu__link--active"] {
   border-bottom: 2px solid var(--ifm-color-primary);
 }
+
+/* || FOOTER */
+
+/* Hide the Original Footer */
+#__docusaurus > footer {
+  display: none;
+}
+
+/* Resize and recolor the footer to match doc item. */
+.footer {
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+  padding: 32px var(--doc-sidebar-width) 32px 0;
+  background-color: var(--ifm-background-color);
+}
+
+/* Flex position the footer container */
+.footer .container {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Remove the margin so they can be centered properly */
+.footer__links,
+.p-copy,
+.footer__logo {
+  margin: unset;
+}
+
+/* Remove the logo hover styling and center */
+.footer > .container > a {
+  display: flex;
+  opacity: unset;
+  transition: none;
+  justify-items: center;
+}

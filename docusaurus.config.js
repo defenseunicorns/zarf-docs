@@ -75,33 +75,16 @@ const config = {
       },
       footer: {
         style: "dark",
+        logo: {
+          alt: "Zarf",
+          src: "img/zarf-logo-light.svg",
+          srcDark: "img/zarf-logo-dark.svg",
+          href: "https://zarf.dev/",
+        },
+        copyright: `<p class="p-copy">Copyright © ${new Date().getFullYear()} Zarf Project, All rights reserved.</p>`,
         links: [
           {
-            title: "Docs",
-            items: [
-              {
-                label: "Getting Started",
-                to: "/docs/getting-started",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Slack",
-                href: "https://kubernetes.slack.com/archives/C03B6BJAUJ3",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/defenseunicorns/zarf",
-              },
-            ],
+            html: SocialsBox({}),
           },
         ],
         // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,

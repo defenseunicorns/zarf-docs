@@ -22,6 +22,10 @@
   padding: 12px;
 }
 
+.svg-link:hover {
+  background-color: var(--ifm-menu-color-background-active);
+}
+
 .svg-link:hover .svg-icon-path {
   fill: var(--ifm-navbar-link-hover-color);
 }
