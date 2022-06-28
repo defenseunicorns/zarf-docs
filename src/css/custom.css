@@ -23,6 +23,7 @@
 html[data-theme="dark"] {
   --ifm-background-color: #0a0e2e;
   --ifm-background-surface-color: #0d133d;
+  --ifm-navbar-search-input-icon: url("images/svg/search-icon-dark.svg");
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -146,9 +147,9 @@ html[data-theme="dark"] {
 }
 
 /* Underline the active link and only the active link */
-[class="menu__link menu__link--active"] {
+/* [class="menu__link menu__link--active"] {
   border-bottom: 2px solid var(--ifm-color-primary);
-}
+} */
 
 /* || FOOTER */
 
@@ -186,4 +187,43 @@ html[data-theme="dark"] {
   opacity: unset;
   transition: none;
   justify-items: center;
+}
+
+/* || SearchBar */
+
+[data-theme="dark"] .navbar__search-input {
+  padding-right: 12px;
+  padding-left: 44px;
+  width: 220px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  background: var(--ifm-background-surface-color)
+    var(--ifm-navbar-search-input-icon) no-repeat 0.75rem center / 1rem 1rem;
+}
+
+[data-theme="dark"] .navbar__search-input:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+[data-theme="dark"] .navbar__search-input:focus-visible {
+  outline-color: var(--ifm-color-primary);
+}
+
+.mobile-search {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .mobile-search {
+    display: flex !important;
+  }
+}
+
+.mobile-search .svg-icon {
+  width: 18px;
+  height: 18px;
+}
+.mobile-search .svg-icon-path {
+  fill-opacity: 1;
 }

@@ -15,7 +15,9 @@ const config = {
   favicon: "img/favicon.svg",
   organizationName: "Defense Unicorns", // Usually your GitHub org/user name.
   projectName: "Zarf", // Usually your repo name.
-
+  themes: [
+    [require.resolve("@easyops-cn/docusaurus-search-local"), { hashed: true }],
+  ],
   presets: [
     [
       "classic",
@@ -50,6 +52,10 @@ const config = {
           target: "_self",
         },
         items: [
+          {
+            type: "search",
+            position: "right",
+          },
           {
             type: "doc",
             docId: "zarf-overview",

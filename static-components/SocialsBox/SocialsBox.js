@@ -3,6 +3,7 @@ const fileToString = require("../utils/fileToString");
 const SocialsValues = {
   SlackIconString: fileToString("static/img/SlackIcon.svg"),
   GithubIconString: fileToString("static/img/GithubIcon.svg"),
+  SearchIconString: fileToString("src/css/images/svg/search-icon-dark.svg"),
   slackUrl: "https://zarf.dev/slack",
   githubUrl: "https://github.com/defenseunicorns/zarf",
 };
