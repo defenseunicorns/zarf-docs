@@ -2,7 +2,7 @@
 // If you swizzled this, it is your responsibility to provide an implementation
 // Tip: swizzle the SearchBar from the Algolia theme for inspiration:
 // npm run swizzle @docusaurus/theme-search-algolia SearchBar
-import SearchBar from "./SearchBar/SearchBar";
+import SearchBar from "@easyops-cn/docusaurus-search-local/dist/client/client/theme/SearchBar";
 import SearchSvg from "../css/images/svg/search-icon-dark.svg";
 import React from "react";
 

@@ -23,6 +23,7 @@
 html[data-theme="dark"] {
   --ifm-background-color: #0a0e2e;
   --ifm-background-surface-color: #0d133d;
+  --search-local-highlight-color: #44a4c2;
   --ifm-navbar-search-input-icon: url("images/svg/search-icon-dark.svg");
 }
 
@@ -35,8 +36,6 @@ html[data-theme="dark"] {
   --ifm-color-primary-light: #4adede;
   --ifm-color-primary-lighter: #4adede;
   --ifm-color-primary-lightest: #4adede;
-  --ifm-background-color: #10184c;
-  --ifm-background-surface-color: #0d133d;
   --ifm-navbar-link-color: rgba(255, 255, 255, 0.7);
   --ifm-toc-link-color: rgba(255, 255, 255, 0.7);
 }
@@ -146,10 +145,10 @@ html[data-theme="dark"] {
   margin-bottom: 16px;
 }
 
-/* Underline the active link and only the active link */
-/* [class="menu__link menu__link--active"] {
+/* Underline the active nav item and not the active doc. */
+:not(.theme-doc-sidebar-item-link) > [class="menu__link menu__link--active"] {
   border-bottom: 2px solid var(--ifm-color-primary);
-} */
+}
 
 /* || FOOTER */
 
@@ -189,8 +188,9 @@ html[data-theme="dark"] {
   justify-items: center;
 }
 
-/* || SearchBar */
+/* || SEARCHBAR */
 
+/* Dark themed search-input */
 [data-theme="dark"] .navbar__search-input {
   padding-right: 12px;
   padding-left: 44px;
@@ -202,28 +202,38 @@ html[data-theme="dark"] {
     var(--ifm-navbar-search-input-icon) no-repeat 0.75rem center / 1rem 1rem;
 }
 
+/* 
+ * Remove the outline.
+ * Highlight on hover and select.
+ */
+[data-theme="dark"] .navbar__search-input:focus-visible,
 [data-theme="dark"] .navbar__search-input:hover {
+  outline: transparent;
   border-color: var(--ifm-color-primary);
 }
 
-[data-theme="dark"] .navbar__search-input:focus-visible {
-  outline-color: var(--ifm-color-primary);
-}
-
+/* Default is hidden */
 .mobile-search {
   display: none;
 }
 
+/* Hide large search and display icon on small screens */
 @media (max-width: 576px) {
+  .navbar__search-input {
+    display: none;
+  }
   .mobile-search {
     display: flex !important;
   }
 }
 
+/* Override the .svg-icon dimensions when child of mobile-search */
 .mobile-search .svg-icon {
   width: 18px;
   height: 18px;
 }
+
+/* Override the fill-opacity of the search icon */
 .mobile-search .svg-icon-path {
   fill-opacity: 1;
 }
