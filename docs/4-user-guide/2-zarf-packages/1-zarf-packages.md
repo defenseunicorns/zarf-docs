@@ -78,15 +78,14 @@ components: <OBJ LIST> # Components definitions are complex and broken down more
 
 ## Building A Zarf Package
 
-<!-- TODO: @jperry Fix this link.. -->
 
 :::info
 
 **Dependencies** for Building a Zarf Package
 
 - A local k8s cluster to work with ([k3s](https://k3s.io/)/[k3d](https://k3d.io/v5.4.1/)/[KinD](https://kind.sigs.k8s.io/docs/user/quick-start#installation))
-- A Zarf CLI ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./user-guide/the-zarf-cli/building-your-own-cli))
-- A Zarf init package ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](./user-guide/the-zarf-cli/building-your-own-cli))
+- A Zarf CLI ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](../the-zarf-cli/building-your-own-cli))
+- A Zarf init package ([downloaded](https://github.com/defenseunicorns/zarf/releases) or [manually built](../the-zarf-cli/building-your-own-cli))
 
 :::
 

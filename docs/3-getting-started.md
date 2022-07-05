@@ -68,7 +68,7 @@ Depending on how familiar you are with Kubernetes, DevOps, and Zarf, let's find 
 
 - If you want to dive straight into Zarf, you can find examples and guides in the [Walkthroughs](./walkthroughs) page.
 
-- More information about the Zarf CLI is available in the [Zarf CLI](./user-guide/the-zarf-cli/the-zarf-cli) page, or by browsing through the help descriptions of all the commands available through `zarf --help`.
+- More information about the Zarf CLI is available in the [Zarf CLI](./user-guide/the-zarf-cli) page, or by browsing through the help descriptions of all the commands available through `zarf --help`.
 
 - More information about the packages that Zarf create and deploy is available in the [Understanding Zarf Packages](./user-guide/zarf-packages/zarf-packages) page.
 
