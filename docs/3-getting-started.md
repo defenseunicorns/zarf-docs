@@ -81,10 +81,10 @@ If you are not seeing that, then it's possible that Zarf was not installed onto 
 ## Where to next?
 Depending on how familiar you are with Kubernetes, DevOps, and Zarf, let's find what set of information would be most useful to you!
 
-- If you want to dive straight into Zarf, you can find examples and guides in the [Walkthroughs](./walkthroughs) page.
+- If you want to dive straight into Zarf, you can find examples and guides in the [Walkthroughs](./13-walkthroughs.md) page.
 
 - More information about the Zarf CLI is available in the [Zarf CLI](./user-guide/the-zarf-cli/the-zarf-cli) page, or by browsing through the help descriptions of all the commands available through `zarf --help`.
 
 - More information about the packages that Zarf create and deploy is available in the [Understanding Zarf Packages](./user-guide/zarf-packages/zarf-packages) page.
 
-- If you want to take a step back and better understand the problem Zarf is trying to solve, you can find more context in the [Understand the Basics](./understand-the-basics) and [Core Concepts](./core-concepts) page.
+- If you want to take a step back and better understand the problem Zarf is trying to solve, you can find more context in the [Understand the Basics](./1-understand-the-basics.md) and [Core Concepts](./2-core-concepts.md) page.
