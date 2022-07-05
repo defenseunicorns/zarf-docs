@@ -244,10 +244,26 @@ html[data-theme="dark"],
   justify-content: space-between;
 }
 
+/* Override logo size */
+.footer__logo {
+  height: 47px;
+}
+
+/* Override social media icons size */
+.footer__link-item .socials-box .svg-link .svg-icon {
+  height: 32px;
+}
+
+/* Adjust copyright font-size */
+.p-copy {
+  font-size: 20px;
+}
+
 @media (max-width: 996px) {
   .footer {
     padding: unset;
     margin-bottom: 16px;
+    margin-top: 4rem;
   }
 
   .footer .container {
