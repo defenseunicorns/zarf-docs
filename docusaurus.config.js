@@ -2,6 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const { SocialsBox } = require("./static-components/SocialsBox/SocialsBox");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -14,7 +15,9 @@ const config = {
   favicon: "img/favicon.svg",
   organizationName: "Defense Unicorns", // Usually your GitHub org/user name.
   projectName: "Zarf", // Usually your repo name.
-
+  themes: [
+    [require.resolve("@easyops-cn/docusaurus-search-local"), { hashed: true }],
+  ],
   presets: [
     [
       "classic",
@@ -41,57 +44,53 @@ const config = {
         disableSwitch: true,
       },
       navbar: {
-        title: "Zarf Docs",
         logo: {
           alt: "Zarf",
-          src: "img/favicon.svg",
+          src: "img/zarf-logo-light.svg",
+          srcDark: "img/zarf-logo-dark.svg",
           href: "https://zarf.dev/",
           target: "_self",
         },
         items: [
+          {
+            type: "search",
+            position: "right",
+          },
           {
             type: "doc",
             docId: "zarf-overview",
             position: "left",
             label: "Docs",
           },
+          {
+            position: "left",
+            label: "Product",
+            to: "https://zarf.dev",
+            target: "_self",
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: "https://github.com/defenseunicorns/zarf",
-            label: "GitHub",
+            type: "html",
             position: "right",
+            className: "navbar__item--socials-box",
+            value: SocialsBox({
+              linkClass: "menu__link",
+            }),
           },
         ],
       },
       footer: {
         style: "dark",
+        logo: {
+          alt: "Zarf",
+          src: "img/zarf-logo-light.svg",
+          srcDark: "img/zarf-logo-dark.svg",
+          href: "https://zarf.dev/",
+        },
+        copyright: `<p class="p-copy">Copyright © ${new Date().getFullYear()} Zarf Project, All rights reserved.</p>`,
         links: [
           {
-            title: "Docs",
-            items: [
-              {
-                label: "Getting Started",
-                to: "/docs/getting-started",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Slack",
-                href: "https://kubernetes.slack.com/archives/C03B6BJAUJ3",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/defenseunicorns/zarf",
-              },
-            ],
+            html: SocialsBox(),
           },
         ],
         // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
