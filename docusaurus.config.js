@@ -26,8 +26,7 @@ const config = {
         docs: {
           path: "zarf-repo/docs/",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/defenseunicorns/zarf-docs/tree/main/",
+          editUrl: "https://github.com/defenseunicorns/zarf/tree/master/",
         },
         blog: false,
         theme: {
