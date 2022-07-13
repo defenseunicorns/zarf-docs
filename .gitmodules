@@ -1,4 +1,3 @@
 [submodule "zarf-repo"]
 	path = zarf-repo
 	url = https://github.com/defenseunicorns/zarf.git
-	branch = 606-generate-docs-from-zarf-schema-json
