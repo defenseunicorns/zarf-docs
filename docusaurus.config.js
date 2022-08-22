@@ -24,9 +24,11 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: "zarf-repo/docs/",
+          path: "master/",
+          include: ["docs/**/*.md", "examples/**/*.md"],
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/defenseunicorns/zarf/tree/master/",
+          editUrl: "https://github.com/defenseunicorns/zarf/tree/",
+          routeBasePath: "/"
         },
         blog: false,
         theme: {
@@ -58,9 +60,15 @@ const config = {
           },
           {
             type: "doc",
-            docId: "zarf-overview",
+            docId: "docs/zarf-overview",
             position: "left",
             label: "Docs",
+          },
+          {
+            type: "doc",
+            docId: "examples/README",
+            position: "left",
+            label: "Examples",
           },
           {
             position: "left",
