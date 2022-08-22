@@ -25,7 +25,6 @@ const config = {
       ({
         docs: {
           path: "master/",
-          include: ["docs/**/*.md", "examples/**/*.md"],
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/defenseunicorns/zarf/tree/",
           routeBasePath: "/"
