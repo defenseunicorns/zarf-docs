@@ -38,7 +38,7 @@ $ npm run start
 
 This will open a browser window that will let you see the built site.
 
-> ⚠️ *Note, `npm run start` will not perform link checking or build the search index.*
+> ⚠️ *Note, `npm run start` will not perform some link checking or build the search index.*
 
 To perform a full build and to run it locally you should run the following:
 
