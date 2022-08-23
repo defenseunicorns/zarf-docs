@@ -4,7 +4,7 @@
 [![Zarf Website](https://img.shields.io/badge/web-zarf.dev-6d87c3)](https://zarf.dev/)
 [![Zarf Documentation](https://img.shields.io/badge/docs-docs.zarf.dev-775ba1)](https://docs.zarf.dev/)
 
-This is the docs site for [Zarf](https://github.com/defenseunicorns/zarf), a declarative air gap solution for kubernetes.  This site is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator created by Facebook.
+This is the docs site for [Zarf](https://github.com/defenseunicorns/zarf), a declarative air gap solution for Kubernetes.  This site is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator created by Facebook.
 
 ### Prerequisites
 
