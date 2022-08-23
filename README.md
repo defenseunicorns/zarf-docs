@@ -1,61 +1,52 @@
-# Website
+# Zarf - Docs Site
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+[![Zarf Slack Channel](https://img.shields.io/badge/k8s%20slack-zarf-40a3dd)](https://kubernetes.slack.com/archives/C03B6BJAUJ3)
+[![Zarf Website](https://img.shields.io/badge/web-zarf.dev-6d87c3)](https://zarf.dev/)
+[![Zarf Documentation](https://img.shields.io/badge/docs-docs.zarf.dev-775ba1)](https://docs.zarf.dev/)
 
-# Temporary Defense Unicorn notes for deploying locally
+This is the docs site for [Zarf](https://github.com/defenseunicorns/zarf), a declarative air gap solution for kubernetes.  This site is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator created by Facebook.
+
+### Prerequisites
+
+This site requires `nodejs` and `npm` so install it if you haven't already.
+
+```shell
+# FOR LINUX (Ubuntu)
+$ sudo apt update
+$ sudo apt install nodejs
+$ sudo apt install npm
+
+# FOR MAC (Homebrew)
+$ brew install nodejs
 ```
-
-# Install npm if you don't have npm installed (on MacOS)
-# FOR LINUX
-    sudo apt update
-    sudo apt install nodejs
-    sudo apt install npm
-# FOR MAC
-    brew install nodejs
-
----
-
-# FOR EVERYONE
-# Install all the things, and run the server locally
-npm i
-npm run start
-```
-
 
 ### Installation
 
-```
-$ yarn
-```
+To install required dependencies run the following:
 
-### Local Development
-
-```
-$ yarn start
+```shell
+$ npm i
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+### Running
 
-### Build
+There are two ways to run the site locally, the simplest being the following:
 
+```shell
+$ npm run start
 ```
-$ yarn build
-```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This will open a browser window that will let you see the built site.
+
+> ⚠️ *Note, `npm run start` will not perform link checking or build the search index.*
+
+To perform a full build and to run it locally you should run the following:
+
+```shell
+$ npm run build
+$ npm run serve
+```
 
 ### Deployment
 
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+To deploy the site, push your changes into a branch and open a PR.  [Netlify](https://www.netlify.com/) will generate a preview for you and a PR approver to see your changes.  Once the approver is happy with the changes they can approve and merge the PR and it will be pushed to production.
