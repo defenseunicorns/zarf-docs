@@ -1,4 +1,3 @@
 [submodule "master"]
 	path = master
 	url = https://github.com/defenseunicorns/zarf.git
-    branch = 676-example-readmes-are-out-of-date
