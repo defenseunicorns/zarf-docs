@@ -27,7 +27,18 @@ const config = {
           path: "master/",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/defenseunicorns/zarf/tree/",
-          routeBasePath: "/"
+          routeBasePath: "/",
+          async sidebarItemsGenerator({
+            defaultSidebarItemsGenerator, ...args
+          }) {
+            const sidebarItems = await defaultSidebarItemsGenerator(args);
+            if (args.item.dirName === "examples") {
+              // This hack removes the "Overview" page from the sidebar on the examples page
+              return sidebarItems.slice(1);
+            } else {
+              return sidebarItems;
+            }
+          }
         },
         blog: false,
         theme: {
