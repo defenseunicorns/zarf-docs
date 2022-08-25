@@ -75,12 +75,6 @@ const config = {
             label: "Docs",
           },
           {
-            type: "doc",
-            docId: "examples/README",
-            position: "left",
-            label: "Examples",
-          },
-          {
             position: "left",
             label: "Product",
             to: "https://zarf.dev",
