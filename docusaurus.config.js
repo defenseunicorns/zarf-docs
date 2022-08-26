@@ -15,8 +15,13 @@ const config = {
   favicon: "img/favicon.svg",
   organizationName: "Defense Unicorns", // Usually your GitHub org/user name.
   projectName: "Zarf", // Usually your repo name.
-  themes: [
-    [require.resolve("@easyops-cn/docusaurus-search-local"), { hashed: true }],
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        indexBlog: false,
+      },
+    ],
   ],
   presets: [
     [
