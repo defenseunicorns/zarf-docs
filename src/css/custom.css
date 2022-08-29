@@ -78,6 +78,7 @@ html[data-theme="dark"],
 }
 
 /* || SearchBar */
+
 /* Algolia Autocomplete theming https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic/ */
 html[data-theme="dark"],
 [data-theme="dark"] {
@@ -90,59 +91,70 @@ html[data-theme="dark"],
   --aa-background-color-alpha: 1 !important;
 }
 
-html[data-theme="dark"] .aa-Label svg,
+/* Set the search icon color */
 html[data-theme="dark"] .aa-SubmitIcon {
-  color: rgba(255, 255, 255, 0.56) !important;
+  color: rgba(255, 255, 255, 0.56);
+}
+html[data-theme="dark"] .aa-Autocomplete:hover .aa-Form,
+.aa-Autocomplete:focus-within .aa-Form {
+  border-color: var(--ifm-color-primary);
+}
+html[data-theme="dark"] .aa-Autocomplete:focus-within .aa-SubmitIcon,
+.aa-Autocomplete:hover .aa-SubmitIcon {
+  color: var(--ifm-color-primary) !important;
 }
 
+/* Set the highlight and text colors. */
 [data-theme="dark"] mark {
   color: white;
-  background-color: rgba(120, 127, 246, 1);
+  background-color: rgba(146, 138, 255, 1);
 }
 
-/* Mobile Search Button */
+/* || Collapsed SearchButton */
+
+/* Create the circular border matching the link-icons */
 [data-theme="dark"] .aa-DetachedSearchButton {
   max-width: fit-content;
-  border-radius: 50px !important;
+  border-radius: 50px;
   border: solid;
   border-color: transparent;
   padding: 8px;
 }
 
+/* Set the size of the icon wrapper background */
 [data-theme="dark"] .aa-DetachedSearchButtonIcon {
   height: 32px;
   width: auto;
 }
 
+/* Set the size of the size and color of the search icon svg */
 [data-theme="dark"] .aa-DetachedSearchButtonIcon .aa-SubmitIcon {
   width: auto;
   height: 24px;
+  color: white;
 }
 
-[data-theme="dark"]
-  .aa-DetachedSearchButton
-  .aa-DetachedSearchButtonIcon
-  .aa-SubmitIcon {
-  color: white !important;
-}
-
+/* Set the search icon svg hover color. */
 [data-theme="dark"]
   .aa-DetachedSearchButton:hover
   .aa-DetachedSearchButtonIcon
   .aa-SubmitIcon {
-  color: var(--ifm-color-primary) !important;
+  color: var(--ifm-color-primary);
 }
 
+/* Set the search icon hover background color */
 [data-theme="dark"] .aa-DetachedSearchButton:hover {
   background-color: var(--ifm-menu-color-background-active);
 }
 
+/* Remove the border from the default search button styling */
 [data-theme="dark"] .aa-DetachedSearchButton {
-  border: none !important;
+  border: none;
 }
 
+/* Remove the placeholder from the default search button */
 [data-theme="dark"] .aa-DetachedSearchButtonPlaceholder {
-  display: none !important;
+  display: none;
 }
 
 /* || NavBar */
