@@ -20,4 +20,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # Code Editor
-.vscode/settings.json
+.vscode

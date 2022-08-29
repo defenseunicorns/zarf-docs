@@ -35,8 +35,6 @@ html[data-theme="dark"],
   --ifm-color-primary-lightest: #4adede;
   --ifm-navbar-link-color: var(--text-secondary);
   --ifm-toc-link-color: var(--text-secondary);
-  --search-local-highlight-color: #44a4c2;
-  --ifm-navbar-search-input-icon: url("images/svg/search-icon-dark.svg");
 }
 
 .docusaurus-highlight-code-line {
@@ -80,48 +78,71 @@ html[data-theme="dark"],
 }
 
 /* || SearchBar */
-
-/* Dark themed search-input */
-[data-theme="dark"] .navbar__search-input {
-  padding-right: 32px;
-  padding-left: 44px;
-  width: 220px;
-  height: 40px;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.23);
-  background: var(--ifm-background-surface-color)
-    var(--ifm-navbar-search-input-icon) no-repeat 0.75rem center / 1rem 1rem;
+/* Algolia Autocomplete theming https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic/ */
+html[data-theme="dark"],
+[data-theme="dark"] {
+  --aa-primary-color-rgb: 135, 255, 255 !important;
+  --aa-muted-color-rgb: 255, 255, 255 !important;
+  --aa-muted-color-alpha: 0.56 !important;
+  --aa-input-background-color-rgb: 255, 255, 255 !important;
+  --aa-input-background-color-alpha: 0 !important;
+  --aa-background-color-rgb: 14, 19, 61 !important;
+  --aa-background-color-alpha: 1 !important;
 }
 
-/* 
- * Remove the outline.
- * Highlight on hover and select.
- */
-[data-theme="dark"] .navbar__search-input:focus-visible,
-[data-theme="dark"] .navbar__search-input:hover {
-  outline: transparent;
-  border-color: var(--ifm-color-primary);
+html[data-theme="dark"] .aa-Label svg,
+html[data-theme="dark"] .aa-SubmitIcon {
+  color: rgba(255, 255, 255, 0.56) !important;
 }
 
-/* Default is hidden */
-.mobile-search {
-  display: none;
+[data-theme="dark"] mark {
+  color: white;
+  background-color: rgba(120, 127, 246, 1);
 }
 
-/* Hide large search and display icon on small screens */
-@media (max-width: 576px) {
-  .navbar__search-input {
-    display: none;
-  }
-  .mobile-search {
-    display: flex !important;
-  }
+/* Mobile Search Button */
+[data-theme="dark"] .aa-DetachedSearchButton {
+  max-width: fit-content;
+  border-radius: 50px !important;
+  border: solid;
+  border-color: transparent;
+  padding: 8px;
 }
 
-/* Override the .svg-icon dimensions when child of mobile-search */
-.mobile-search .svg-icon {
-  width: 18px;
-  height: 18px;
+[data-theme="dark"] .aa-DetachedSearchButtonIcon {
+  height: 32px;
+  width: auto;
+}
+
+[data-theme="dark"] .aa-DetachedSearchButtonIcon .aa-SubmitIcon {
+  width: auto;
+  height: 24px;
+}
+
+[data-theme="dark"]
+  .aa-DetachedSearchButton
+  .aa-DetachedSearchButtonIcon
+  .aa-SubmitIcon {
+  color: white !important;
+}
+
+[data-theme="dark"]
+  .aa-DetachedSearchButton:hover
+  .aa-DetachedSearchButtonIcon
+  .aa-SubmitIcon {
+  color: var(--ifm-color-primary) !important;
+}
+
+[data-theme="dark"] .aa-DetachedSearchButton:hover {
+  background-color: var(--ifm-menu-color-background-active);
+}
+
+[data-theme="dark"] .aa-DetachedSearchButton {
+  border: none !important;
+}
+
+[data-theme="dark"] .aa-DetachedSearchButtonPlaceholder {
+  display: none !important;
 }
 
 /* || NavBar */
