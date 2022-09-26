@@ -24,9 +24,21 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: "zarf-repo/docs/",
+          path: "master/",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/defenseunicorns/zarf/tree/master/",
+          editUrl: "https://github.com/defenseunicorns/zarf/tree/",
+          routeBasePath: "/",
+          async sidebarItemsGenerator({
+            defaultSidebarItemsGenerator, ...args
+          }) {
+            const sidebarItems = await defaultSidebarItemsGenerator(args);
+            if (args.item.dirName === "examples") {
+              // This hack removes the "Overview" page from the sidebar on the examples page
+              return sidebarItems.slice(1);
+            } else {
+              return sidebarItems;
+            }
+          }
         },
         blog: false,
         theme: {
@@ -58,7 +70,7 @@ const config = {
           },
           {
             type: "doc",
-            docId: "zarf-overview",
+            docId: "docs/zarf-overview",
             position: "left",
             label: "Docs",
           },
