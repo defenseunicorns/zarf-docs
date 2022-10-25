@@ -36,6 +36,14 @@ The markdown files for Zarf are held in the main Zarf repo and are pulled into t
 $ git submodule update --remote --recursive master
 ```
 
+To checkout a specific tag within the submodule you can do the following after updating:
+
+```shell
+$ cd master
+$ git checkout <tag>
+$ cd ..
+```
+
 You may also find it useful to switch to a different branch for the submodule.  You can do this by adding a `branch` to `.gitmodules`:
 
 ```
