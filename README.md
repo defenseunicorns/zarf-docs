@@ -33,13 +33,13 @@ $ npm i
 The markdown files for Zarf are held in the main Zarf repo and are pulled into this repo using a submodule.  To update the reference to those docs run the following command:
 
 ```shell
-$ git submodule update --remote --recursive master
+$ git submodule update --remote --recursive main
 ```
 
 To checkout a specific tag within the submodule you can do the following after updating:
 
 ```shell
-$ cd master
+$ cd main
 $ git checkout <tag>
 $ cd ..
 ```
@@ -47,8 +47,8 @@ $ cd ..
 You may also find it useful to switch to a different branch for the submodule.  You can do this by adding a `branch` to `.gitmodules`:
 
 ```
-[submodule "master"]
-	path = master
+[submodule "main"]
+	path = main
 	url = https://github.com/defenseunicorns/zarf.git
     branch = <your-branch-here>
 ```

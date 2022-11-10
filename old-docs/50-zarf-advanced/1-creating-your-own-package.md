@@ -21,7 +21,7 @@ There are two types of Zarf packages, a `ZarfInitConfig` and a `ZarfPackageConfi
 ## What is a Zarf Component
 
 ## Creating a Zarf.yaml
-Every Zarf package starts with a Zarf.yaml which must conform to this [json schema definition](https://github.com/defenseunicorns/zarf/blob/master/zarf.schema.json). This file defines the package's metadata as well as components that are to be deployed. Zarf packages are conceptually broken up into one more components, each of which define all the resources, dependencies, or commands that are required to deploy itself. Each component gets deployed asyncronously in the order that they're defined.
+Every Zarf package starts with a Zarf.yaml which must conform to this [json schema definition](https://github.com/defenseunicorns/zarf/blob/main/zarf.schema.json). This file defines the package's metadata as well as components that are to be deployed. Zarf packages are conceptually broken up into one more components, each of which define all the resources, dependencies, or commands that are required to deploy itself. Each component gets deployed asyncronously in the order that they're defined.
 
 
 The following is an example of a really simple zarf.yaml:
