@@ -1,1 +1,0 @@
-# Seeding the Zarf Registry
