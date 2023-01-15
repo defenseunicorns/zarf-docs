@@ -28,6 +28,10 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/defenseunicorns/zarf/tree/",
           routeBasePath: "/",
+          exclude: [
+            'hack/**',
+            'src/**',
+          ],
           async sidebarItemsGenerator({
             defaultSidebarItemsGenerator, ...args
           }) {
