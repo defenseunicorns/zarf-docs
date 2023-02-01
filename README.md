@@ -1,5 +1,8 @@
 # Zarf - Docs Site
 
+
+This site has been archived. The documentation page has been moved to the [main Zarf repository](https://github.com/defenseunicorns/zarf/tree/main/docs-website)
+
 [![Zarf Slack Channel](https://img.shields.io/badge/k8s%20slack-zarf-40a3dd)](https://kubernetes.slack.com/archives/C03B6BJAUJ3)
 [![Zarf Website](https://img.shields.io/badge/web-zarf.dev-6d87c3)](https://zarf.dev/)
 [![Zarf Documentation](https://img.shields.io/badge/docs-docs.zarf.dev-775ba1)](https://docs.zarf.dev/)
